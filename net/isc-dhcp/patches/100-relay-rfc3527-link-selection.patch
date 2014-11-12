@@ -21,7 +21,7 @@
  "                     [-pf <pid-file>] [--no-pid]\n"\
  "                     [-m append|replace|forward|discard]\n" \
  "                     [-i interface0 [ ... -i interfaceN]\n" \
-+"                     [-l interface]\n" \
++"                     [-o interface]\n" \
  "                     server0 [ ... serverN]\n\n" \
  "       dhcrelay -6   [-d] [-q] [-I] [-c <hops>] [-p <port>]\n" \
  "                     [-pf <pid-file>] [--no-pid]\n"\
@@ -29,7 +29,7 @@
  "                [-pf <pid-file>] [--no-pid]\n"\
  "                [-m append|replace|forward|discard]\n" \
  "                [-i interface0 [ ... -i interfaceN]\n" \
-+"                [-l interface]\n" \
++"                [-o interface]\n" \
  "                server0 [ ... serverN]\n\n"
  #endif
  
@@ -37,7 +37,7 @@
  				agent_relay_mode = discard;
  			} else
  				usage();
-+		} else if (!strcmp (argv [i], "-l")) {
++		} else if (!strcmp (argv [i], "-o")) {
 +			add_agent_options = 1;
 +			add_rfc3527_suboption = 1;
 +			if (++i == argc)
